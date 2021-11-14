@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" href="assets/css/ImageSelect.css">
+  	<link rel="stylesheet" href="assets/css/chosen.css">
+  	<link rel="stylesheet" href="assets/css/Flat.css">
+	<title>Roehampton University (QA)</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="slider-arrow" viewBox="0 0 128 128">
+			<g><line style="fill:none;stroke-width:12;stroke-linecap:square;stroke-miterlimit:10;" x1="111" x2="64" y1="40.5" y2="87.499"/><line style="fill:none;stroke-width:12;stroke-linecap:square;stroke-miterlimit:10;" x1="64" x2="17" y1="87.499" y2="40.5"/></g>
+		</symbol>
+		<symbol id="phone-icon" viewBox="0 0 14 13">
+			<g><g><g/><g><path  d="M12.207 8.535a7.421 7.421 0 0 1-2.319-.37c-.362-.125-.809-.01-1.029.217L7.397 9.486c-1.696-.904-2.74-1.95-3.633-3.633l1.07-1.425c.277-.277.379-.684.257-1.063a7.36 7.36 0 0 1-.369-2.322C4.722.467 4.255 0 3.68 0H1.293C.717 0 .25.467.25 1.043.25 7.637 5.612 13 12.207 13c.576 0 1.043-.467 1.043-1.043v-2.38c0-.575-.467-1.042-1.043-1.042z"/></g></g></g>
+		</symbol>
+		<symbol id="email-icon" viewBox="0 0 16 16">
+			<g><g><g/><g><path d="M11.232 14.744c-1.33.583-2.482.776-4.06.776C3.49 15.52.25 12.957.25 8.732.25 4.334 3.535.52 8.548.52c3.906 0 6.702 2.607 6.702 6.229 0 3.146-1.819 5.13-4.217 5.13-1.043 0-1.797-.52-1.91-1.659H9.08c-.688 1.099-1.686 1.658-2.863 1.658-1.442 0-2.485-1.034-2.485-2.8 0-2.628 1.997-5.022 5.19-5.022.978 0 2.085.237 2.64.54l-.667 3.987c-.223 1.271-.066 1.854.555 1.875.954.02 2.154-1.164 2.154-3.642 0-2.8-1.864-4.978-5.303-4.978-3.393 0-6.367 2.587-6.367 6.703 0 3.598 2.374 5.646 5.68 5.646 1.13 0 2.328-.237 3.218-.688zm-1.972-8.9a2.768 2.768 0 0 0-.688-.086c-1.463 0-2.618 1.4-2.618 3.062 0 .82.377 1.336 1.11 1.336.82 0 1.686-1.014 1.885-2.262z"/></g></g></g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="/">
+							<img src="assets/images/logo.png" alt="">
+						</a>
+					</div>
+					<nav class="header__nav">
+						<ul class="header__menu">
+							<li><a href="#" class="header__link" data-scroll="about">About University</a></li>
+							<li><a href="#" class="header__link" data-scroll="why">Why Roehampton University </a></li>
+							<li><a href="#" class="header__link" data-scroll="programmes">Programmes</a></li>
+							<li><a href="#" class="header__link" data-scroll="watch">The University Life</a></li>
+						</ul>
+						<div class="header__buttons">
+							<a href="#" class="header__button">Sign up</a>
+							<a href="#" class="header__button header__button_green">Sign in</a>
+						</div>
+					</nav>
+					<div class="burger">
+						<span class="burger__item"></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="intro" id="intro">
+				<div class="container">
+					<div class="intro__inner">
+						<div class="intro__info">
+							<h1 class="intro__title">Study at the most research and modern university of <span>England</span></h1>
+							<div class="intro__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt fermentum eu venenatis diam nec.</p>
+							</div>
+						</div><!--/intro__info-->
+						<div class="intro__form">
+							<div class="form-card">
+								<form>
+									<div class="form-card__item form-card__item_half">
+										<label for="firstname">First name</label>
+										<input type="text" id="firstname" placeholder="First name">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="lastname">Last name</label>
+										<input type="text" id="lastname" placeholder="Last name">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="email">E-mail</label>
+										<input type="email" id="email" placeholder="E-mail">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="phone">Phone</label>
+										<input type="text" id="phone" placeholder="+ 99 ___ ___ __ ">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="country">Country</label>
+										<div class="form-card__select-wrapper">
+											<select  class="my-select" id="country">
+     											<option data-img-src="assets/images/flag-argentina.svg">Argentina</option>
+     											<option data-img-src="assets/images/flag-argentina.svg">Argentina</option>
+     											<option data-img-src="assets/images/flag-argentina.svg">Argentina</option>
+     										</select>
+										</div>
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="level">Level of English</label>
+										<div class="form-card__select-wrapper">
+											<select  class="my-select" id="level">
+     											<option data-img-src="assets/images/level.svg">Intermediate</option>
+     											<option data-img-src="assets/images/level.svg">Intermediate</option>
+     											<option data-img-src="assets/images/level.svg">Intermediate</option>
+     										</select>
+										</div>
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="education">Previous education</label>
+										<input type="text" id="education" placeholder="MSU, f. of Management">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="program">Program of interest</label>
+										<div class="form-card__select-wrapper">
+											<select  class="my-select" id="program">
+     											<option>MBA with placement year</option>
+     											<option>MBA with placement year</option>
+     											<option>MBA with placement year</option>
+     										</select>
+										</div>
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item">
+										<label for="ask">Ask your questions here</label>
+										<textarea id="ask" placeholder="My questions here"></textarea>
+									</div><!--/form-card__item-->
+									<div class="form-card__check">
+										<input type="checkbox"  id="checkbox" required value="1">
+										<label for="checkbox">
+											<span></span>
+											<i>I authorise the university and its partners to contact me with further questions</i>
+										</label>
+									</div>
+									<div class="form-card__text">By clicking on the "Learn more" button, you agree to the privacy statement.</div>
+									<div class="form-card__btn-wrapper">
+										<button type="submit" class="form-card__btn"> Learn more</button>
+									</div>
+								</form>
+							</div><!--/form-card-->
+						</div>
+					</div>
+				</div>
+			</section><!--/intro-->
+			<section class="about section" id="about">
+				<div class="container">
+					<h2 class="title-line">About Roehampton University </h2>
+					<div class="about__inner">
+						<div class="about__photo">
+							<img src="assets/images/university.png" alt="">
+						</div>
+						<div class="about__info">
+							<p>Roehampton is a very special university. We have a proud history stretching back 180 years and are the only London university with a parkland campus. Our four colleges provide a strong sense of community and our size means it’s easy get to know the people who teach you and those you study with.</p>
+							<p>At Roehampton we pride ourselves on helping all students, regardless of their background, to develop the skills they need for a successful graduate career and fulfilling life. During your time with us you’ll study alongside our exceptional academic staff, who are engaged in world-class research.</p>
+							<p>Situated just 30 minutes from central London and a 5-minute walk from Richmond Park, our beautiful 54-acre parkland campus provides the best of both worlds.</p>
+						</div>
+					</div><!--/about__inner-->
+					<div class="about__slider">
+						<div class="slider-arrows">
+							<span class="slider-arrow slider-arrow_prev">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</span>
+							<span class="slider-arrow slider-arrow_next">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</span>
+						</div>
+						<div class="slider-about">
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_1.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_2.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_3.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_4.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_1.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_2.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_3.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+							<div class="slider-about__slide">
+								<div class="slider-about__item">
+									<div class="slider-about__photo">
+										<img src="assets/images/slide-about_4.png" alt="">
+									</div>
+									<h3 class="slider-about__title">At Roehampton we pride </h3>
+									<div class="slider-about__info">Ourselves on helping all students</div>
+								</div>
+							</div><!--/slider-about__slide-->
+						</div><!--/slider-about-->
+					</div>
+				</div>
+			</section><!--/about-->
+			<section class="why section" id="why">
+				<div class="container">
+					<h2 class="title-line">Why Roehampton University</h2>
+					<div class="why__inner">
+						<div class="why__item">
+							<div>
+								<div class="why__stat">96<span>%</span></div>
+								<div class="why__text">of our postgraduate students are in work or further study within 15 months of graduating (The Graduate Outcome Survey)</div>
+							</div>
+							<a href="#" class="why__link">Learn more</a>
+						</div><!--/why__item-->
+						<div class="why__item">
+							<div>
+								<div class="why__icon">
+									<img src="assets/images/bild-icon.svg" alt="">
+								</div>
+								<div class="why__text">A parkland campus with great facilities in the middle of south-west London</div>
+							</div>
+							<a href="#" class="why__link">Learn more</a>
+						</div><!--/why__item-->
+						<div class="why__item">
+							<div>
+								<div class="why__stat">66<span>%</span></div>
+								<div class="why__text">of research judged as world-leading or internationally excellent (Research Excellence Framework 2014)</div>
+							</div>
+							<a href="#" class="why__link">Learn more</a>
+						</div><!--/why__item-->
+						<div class="why__item">
+							<div>
+								<div class="why__icon">
+									<img src="assets/images/community-icon.svg" alt="">
+								</div>
+								<div class="why__text">The community feel and safety of a traditional university campus</div>
+							</div>
+							<a href="#" class="why__link">Learn more</a>
+						</div><!--/why__item-->
+						<div class="why__item">
+							<div>
+								<div class="why__icon">
+									<img src="assets/images/flag-icon.svg" alt="">
+								</div>
+								<div class="why__text">Free English test</div>
+							</div>
+							<a href="#" class="why__link">Learn more</a>
+						</div><!--/why__item-->
+						<div class="why__item">
+							<div>
+								<div class="why__stat">25<span>%</span></div>
+								<div class="why__text">Scholarships available for all Latin American students.</div>
+							</div>
+							<a href="#" class="why__link">Learn more</a>
+						</div><!--/why__item-->
+					</div>
+				</div>
+			</section><!--/why-->
+			<section class="programmes section" id="programmes">
+				<div class="container">
+					<h2 class="title-line">Programmes</h2>
+				</div>
+				<div class="programmes__box">
+					<div class="container">
+						<div class="programmes__inner">
+							<div class="programmes__photo">
+								<img src="assets/images/programmes-photo_1.png" alt="">
+							</div>
+							<div class="programmes__info programmes__info_right">
+								<h4 class="programmes__title">MBA with placement year</h4>
+								<div class="programmes__text">
+									<p>The Roehampton MBA with placement year is designed with early career professionals in mind. As a graduate you will receive a dual award Level 7 Diploma in Strategic Management and Leadership by the Chartered Management Institute (CMI). You will have the option to take a placement year with this MBA. You will gain project management skills and develop the strategic acumen required to direct global enterprises. We will support your development through a Dissertation or Consultancy Project.</p>
+								</div>
+								<div class="programmes__data">
+									<div>2 years full-time</div>
+									<div>£8,250 per annum</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/programmes__box-->
+				<div class="programmes__box programmes__box_left-grad">
+					<div class="container">
+						<div class="programmes__inner">
+							<div class="programmes__info programmes__info_left">
+								<h4 class="programmes__title">MSc Digital Marketing</h4>
+								<div class="programmes__text">
+									<p>MSc Digital Marketing will give you the knowledge to develop and implement digital marketing strategies in a socially responsible manner. You will learn how to analyse complex data for informed decision-making, and develop practical skills in web design, content creation, campaign development and data analysis using a range of techniques and digital products. The programme benefits from the Roehampton Business School’s wider marketing research expertise and practitioner links within the marketing profession in London and abroad. This degree is accredited by The Institute of Data and Marketing (IDM).</p>
+								</div>
+								<div class="programmes__data">
+									<div>1 years full-time / 2 years part-time</div>
+									<div>£8,250 per annum</div>
+								</div>
+							</div>
+							<div class="programmes__photo">
+								<img src="assets/images/programmes-photo_2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div><!--/programmes__box-->
+				<div class="programmes__box">
+					<div class="container">
+						<div class="programmes__inner">
+							<div class="programmes__photo">
+								<img src="assets/images/programmes-photo_1.png" alt="">
+							</div>
+							<div class="programmes__info programmes__info_right">
+								<h4 class="programmes__title">MSc Computing</h4>
+								<div class="programmes__text">
+									<p>MSc Computing Degree is a conversion programme that requires no previous academic experience in the field of computing, making it the ideal course if you want to change career or develop a new set of skills to complement your existing experience and move to a wider range of exciting roles in computing and IT. </p>
+									<p>The course focuses on core computing skills such as software development, databases and cyber security, helping you to become a competent and fluent computing professional. You will learn key programming skills across languages and platforms, as well as how to provide data solutions and secure systems.</p>
+								</div>
+								<div class="programmes__data">
+									<div>1 years full-time/2 years part-time</div>
+									<div>£8,250 per annum</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/programmes__box-->
+				<div class="programmes__box programmes__box_right-grad">
+					<div class="container">
+						<div class="programmes__inner">
+							<div class="programmes__info programmes__info_left">
+								<h4 class="programmes__title">MSc Occupational and Business Psychology</h4>
+								<div class="programmes__text">
+									<p>You will develop scientific knowledge and practical skills to offer innovative solutions to workplace problems around employee selection, wellbeing, performance, development, diversity and change. You will receive first-hand experience of working within the Occupational and Business Psychology sector. You will learn how to become an independent consultant and apply the consultancy cycle in your practice. This MSc is accredited by the British Psychological Society (BPS).</p>
+								</div>
+								<div class="programmes__data">
+									<div>1 years full-time / 2-4 years part-time</div>
+									<div>£8,250 per annum</div>
+								</div>
+							</div>
+							<div class="programmes__photo">
+								<img src="assets/images/programmes-photo_3.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div><!--/programmes__box-->
+				<div class="programmes__box">
+					<div class="container">
+						<div class="programmes__inner">
+							<div class="programmes__photo">
+								<img src="assets/images/programmes-photo_4.png" alt="">
+							</div>
+							<div class="programmes__info programmes__info_right">
+								<h4 class="programmes__title">MSc Global Business Management</h4>
+								<div class="programmes__text">
+									<p>You will join the Global Leadership Programme, a programme of professional development workshops and company visits designed to help you develop the skills needed to succeed in a fast-paced global business. You will explore the latest theory and gain practical insights into areas of international business and global business operations and strategies. This programme is dual accredited to a CMI qualification.</p>
+								</div>
+								<div class="programmes__data">
+									<div>1 years full-time</div>
+									<div>£8,250 per annum</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/programmes__box-->
+				<div class="programmes__box programmes__box_left-grad">
+					<div class="container">
+						<div class="programmes__inner">
+							<div class="programmes__info programmes__info_left">
+								<h4 class="programmes__title">MSc Global Financial Management</h4>
+								<div class="programmes__text">
+									<p>MSc Global Financial Management will help transform your mindset and the way you understand global finance and the strategic context within which global firms operate and make financial decisions. You will be prepared for managerial roles in international finance, with a focus on financial management and strategy within global organisations. You will study both the principals of global finance as well as contemporary aspects of investment and capital. This programme is dual accredited to a CMI qualification. This course offers the addition of a placement year with placement preparation workshops.</p>
+								</div>
+								<div class="programmes__data">
+									<div>1 years full-time</div>
+									<div>£8,250 per annum</div>
+								</div>
+							</div>
+							<div class="programmes__photo">
+								<img src="assets/images/programmes-photo_5.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div><!--/programmes__box-->
+			</section><!--/programmes-->
+			<section class="watch section" id="watch">
+				<div class="container">
+					<h2 class="title-line">
+						<img src="assets/images/play.svg" alt="">
+						<span>Watch the videos about the university life</span>
+					</h2>
+					<div class="watch__inner">
+						<div class="watch__item">
+							<div class="watch-video">
+								<div class="watch-video__content">
+									<img src="assets/images/video-place_1.png" alt="">
+								</div>
+								<div class="watch-video__logo">
+									<img src="assets/images/logo_small.svg" alt="">
+								</div>
+								<a href="#" class="watch-video__link"></a>
+							</div>
+							<div class="watch__info">
+								<div class="watch__header">
+									<a href="#" class="watch__title">MSc Global Financial Management</a>
+									<div class="watch__time">10:51</div>
+								</div>
+								<div class="watch__text">MSc Global Financial Management will help transform your mindset and the way you understand global finance and the strategic context within which global firms operate and make financial decisions. </div>
+							</div>
+						</div><!--/watch__item-->
+						<div class="watch__item">
+							<div class="watch-video">
+								<div class="watch-video__content">
+									<img src="assets/images/video-place_2.png" alt="">
+								</div>
+								<div class="watch-video__logo">
+									<img src="assets/images/logo_small.svg" alt="">
+								</div>
+								<a href="#" class="watch-video__link"></a>
+							</div>
+							<div class="watch__info">
+								<div class="watch__header">
+									<a href="#" class="watch__title">MSc Global Financial Management</a>
+									<div class="watch__time">10:51</div>
+								</div>
+								<div class="watch__text">MSc Global Financial Management will help transform your mindset and the way you understand global finance and the strategic context within which global firms operate and make financial decisions. </div>
+							</div>
+						</div><!--/watch__item-->
+					</div>
+				</div>
+			</section><!--/watch-->
+			<section class="study section">
+				<div class="container">
+					<div class="study__inner">
+						<div class="study__info">
+							<h2 class="study__title">Study at the most research and modern university of <span>England</span></h2>
+							<div class="study__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt fermentum eu venenatis diam nec.</p>
+							</div>
+						</div>
+						<div class="study__form">
+							<div class="form-card">
+								<form>
+									<div class="form-card__item form-card__item_half">
+										<label for="firstname2">First name</label>
+										<input type="text" id="firstname2" placeholder="First name">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="lastname2">Last name</label>
+										<input type="text" id="lastname2" placeholder="Last name">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="email2">E-mail</label>
+										<input type="email" id="email2" placeholder="E-mail">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="phone2">Phone</label>
+										<input type="text" id="phone2" placeholder="+ 99 ___ ___ __ ">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="country2">Country</label>
+										<div class="form-card__select-wrapper">
+											<select  class="my-select" id="country2">
+     											<option data-img-src="assets/images/flag-argentina.svg">Argentina</option>
+     											<option data-img-src="assets/images/flag-argentina.svg">Argentina</option>
+     											<option data-img-src="assets/images/flag-argentina.svg">Argentina</option>
+     										</select>
+										</div>
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="level2">Level of English</label>
+										<div class="form-card__select-wrapper">
+											<select  class="my-select" id="level2">
+     											<option data-img-src="assets/images/level.svg">Intermediate</option>
+     											<option data-img-src="assets/images/level.svg">Intermediate</option>
+     											<option data-img-src="assets/images/level.svg">Intermediate</option>
+     										</select>
+										</div>
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="education2">Previous education</label>
+										<input type="text" id="education2" placeholder="MSU, f. of Management">
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item form-card__item_half">
+										<label for="program2">Program of interest</label>
+										<div class="form-card__select-wrapper">
+											<select  class="my-select" id="program2">
+     											<option>MBA with placement year</option>
+     											<option>MBA with placement year</option>
+     											<option>MBA with placement year</option>
+     										</select>
+										</div>
+									</div><!--/form-card__item_half-->
+									<div class="form-card__item">
+										<label for="ask2">Ask your questions here</label>
+										<textarea id="ask2" placeholder="My questions here"></textarea>
+									</div><!--/form-card__item-->
+									<div class="form-card__check">
+										<input type="checkbox"  id="checkbox2" required value="1">
+										<label for="checkbox2">
+											<span></span>
+											<i>I authorise the university and its partners to contact me with further questions</i>
+										</label>
+									</div>
+									<div class="form-card__text">By clicking on the "Learn more" button, you agree to the privacy statement.</div>
+									<div class="form-card__btn-wrapper">
+										<button type="submit" class="form-card__btn"> Learn more</button>
+									</div>
+								</form>
+							</div><!--/form-card-->
+						</div>
+					</div>
+				</div>
+			</section><!--/study-->
+		</main>
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="container">
+					<div class="footer__inner">
+						<div class="footer__col">
+							<a href="#" class="footer__logo">
+								<img src="assets/images/logo.png" alt="">
+							</a>
+							<div class="footer-social">
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/fb-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/tw-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/inst-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/yt-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/ws-icon.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer__col">
+							<div class="footer-menu">
+								<h5 class="footer-menu__title">Contact us</h5>
+								<ul>
+									<li>
+										<a href="tel:+4402081082499">
+											<span>
+												<svg>
+													<use xlink:href="#phone-icon"></use>
+												</svg>
+											</span>	
+											<span>+44 (0)20 8108 2499</span>
+										</a>
+									</li>
+									<li>
+										<a href="mailto:home.admissions@qa.com">
+											<span>
+												<svg>
+													<use xlink:href="#email-icon"></use>
+												</svg>
+											</span>	
+											<span>home.admissions@qa.com</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col">
+							<div class="footer-menu">
+								<h5 class="footer-menu__title">Branches</h5>
+								<ul>
+									<li><a href="#">Birmingham Centre</a></li>
+									<li><a href="#">London Holborn Centre</a></li>
+									<li><a href="#">Manchester Centre</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__col">
+							<div class="footer-menu">
+								<h5 class="footer-menu__title">Blog</h5>
+								<ul>
+									<li>
+										<div class="footer-menu__data">10 Sep</div>
+										<a href="#">Birmingham Centre</a>
+									</li>
+									<li>
+										<div class="footer-menu__data">10 Sep</div>
+										<a href="#">Birmingham Centre</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__foot">
+				<div class="container">
+					<div class="footer__copyright">© 2021 All rights reserved.</div>
+					<div class="footer__links">
+						<a href="#" class="footer__link">Privacy policy</a>
+						<a href="#" class="footer__link">Terms and conditions</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/chosen.jquery.min.js"></script>
+  	<script src="assets/js/ImageSelect.jquery.js"></script>
+  	<script src="assets/js/script.js"></script>
+</body>
+</html>
